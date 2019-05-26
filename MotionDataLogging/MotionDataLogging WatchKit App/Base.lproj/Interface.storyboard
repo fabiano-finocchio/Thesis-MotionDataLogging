@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MotionDataLogging_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" text="MotionDataLogging" textAlignment="center" id="9QI-z0-a9U">
+                            <color key="textColor" red="0.95129625399999995" green="1" blue="0.33443837659999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="13"/>
+                        </label>
+                        <timer width="136" alignment="left" textAlignment="center" previewedSeconds="0" id="Tvg-k4-08r">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </timer>
+                        <button width="136" alignment="left" title="Start" id="x2o-zW-vxx">
+                            <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onStartPressed" destination="AgC-eL-Hgc" id="LTE-jf-odn"/>
+                            </connections>
+                        </button>
+                        <button width="136" alignment="left" title="Stop" id="IZ2-Dr-26O">
+                            <color key="backgroundColor" red="1" green="0.30784182399999999" blue="0.18451384030000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="onStopPressed" destination="AgC-eL-Hgc" id="BRq-OP-nza"/>
+                            </connections>
+                        </button>
+                        <label width="136" height="39" alignment="left" text="system info" textAlignment="center" numberOfLines="2" id="g02-9n-Ia1"/>
+                    </items>
+                    <connections>
+                        <outlet property="dataLogTimer" destination="Tvg-k4-08r" id="C3K-9K-cbS"/>
+                        <outlet property="txtSystem" destination="g02-9n-Ia1" id="rlP-t4-pCu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="28.5"/>
+        </scene>
+    </scenes>
+</document>
